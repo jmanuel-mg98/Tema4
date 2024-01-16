@@ -11,7 +11,7 @@ public class Ejercicio3 {
 		int tabla2[] = new int [10];
 		int num;
 		for (int i=0;i<tabla1.length;i++) {
-			System.out.println("Escribe un Numero");
+			System.out.println("Escribe un Numero: ");
 			num= sc.nextInt();
 			tabla1[i]=num;
 		}
