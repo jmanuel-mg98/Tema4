@@ -10,6 +10,8 @@ public class Ejercicio02 {
 		int nota = 0;
 		int minimo = 10;
 		int maximo = 0;
+		int media = 0;
+		int calculo=0;
 
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[0].length; j++) {
@@ -27,22 +29,28 @@ public class Ejercicio02 {
 			}
 			System.out.println();
 		}
+		
 		for (int i = 0; i < tabla.length; i++) {
-			System.out.print("Alumno " + (i + 1) + ": ");
+			minimo = 10;
+			maximo = 0;
 			for (int j = 0; j < tabla[0].length; j++) {
+				
 				if (tabla[i][j] < minimo) {
 					minimo = tabla[i][j];
-					System.out.println("La nota minimo del alumno: " + (i + 1) + " es: " + minimo);
-
 				}
+
 				if (tabla[i][j] > maximo) {
 					maximo = tabla[i][j];
-					System.out.println("La nota maxima del alumno: " + (i + 1) + " es: " + maximo);
 				}
+				
+				media+=tabla[i][j];
+				calculo = media/tabla[0].length;
+
 			}
-			
+			System.out.println("La nota minimo del alumno " + (i + 1) + ": " + minimo);
+			System.out.println("La nota maxima del alumno " + (i + 1) + ": " + maximo);
+			System.out.println("La nota media del alumno " + (i + 1) + ": " + calculo);
 		}
 
 	}
-
 }
